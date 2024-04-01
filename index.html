@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="src/fonts/fontawesome-free-6.1.2-web/css/all.min.css"
+    />
+    <!-- <link rel="stylesheet" href="src/fonts/Roboto/Roboto.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="build/css/app.css" />
+    <link rel="stylesheet" href="build/css/spinner.css" />
+  </head>
+  <body>
+    <section class="contact">
+      <div class="wrapper">
+        <h1 class="contact__heading">Contact Your Representative</h1>
+        <div class="contact__grid">
+          <div class="contact__content">
+            <p class="contact__desc">
+              Find the ULTOMIRIS representative closest to you, connect at your
+              convenience, and get answers to your questions.
+            </p>
+          </div>
+          <div class="contact__flex">
+            <div class="contact__number">
+              <div class="contact__image">
+                <img
+                  src="build/img/number-1.png"
+                  alt="number 1"
+                  class="contact__img"
+                />
+              </div>
+              <p class="contact__desc-numer">Enter your ZIP Code below.</p>
+            </div>
+
+            <div class="contact__number">
+              <div class="contact__image">
+                <img
+                  src="build/img/number-2.png"
+                  alt="number 2"
+                  class="contact__img"
+                />
+              </div>
+              <p class="contact__desc-numer">
+                Select the topic that you would like to discuss.
+              </p>
+            </div>
+
+            <div class="contact__number">
+              <div class="contact__image">
+                <img
+                  src="build/img/number-3.png"
+                  alt="number 3"
+                  class="contact__img"
+                />
+              </div>
+              <p class="contact__desc-numer">
+                Click “Search” to find the rep in your area.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stay-connected">
+      <div class="wrapper">
+        <div class="form__wrapper">
+          <form class="form">
+            <h3 class="form__title">ULTOMIRIS Representative Finder</h3>
+
+            <div class="form__grid">
+              <div class="form__input-wrapper">
+                <input
+                  autocomplete="postal-code"
+                  class="form__control-input"
+                  type="text"
+                  id="zip-code"
+                  name="zip-code"
+                  placeholder="ZIP Code"
+                />
+                <div id="error-mesage " class="error-mesage">
+                  <span id="error-1" class="error-validation"
+                    >Please enter a valid ZIP Code</span
+                  >
+                </div>
+              </div>
+
+              <div class="form__topic-wrapper">
+                <select class="form__topic" id="topic">
+                  <option value="" selected disabled>Reason for contact</option>
+                  <option value="1">ULTOMIRIS Efficacy and Safety</option>
+                  <option value="3">ULTOMIRIS Dosing</option>
+                  <option value="4">Ordering ULTOMIRIS</option>
+                  <option value="5">ULTOMIRIS Treatment Duration</option>
+                  <option value="6">
+                    ULTOMIRIS REMS (Risk Evaluation and Mitigation Strategy)
+                  </option>
+                  <option value="7">Patient Resources</option>
+                  <option value="8">Other</option>
+                </select>
+                <div class="error-mesage">
+                  <span id="error-2" class="error-validation error-select-topic"
+                    >Please select a reason for contact</span
+                  >
+                </div>
+              </div>
+
+              <div class="form__button-field">
+                <button
+                  id="search"
+                  type="button"
+                  class="form__button form__button-search"
+                >
+                  Search
+                </button>
+                <button
+                  id="reset"
+                  type="reset"
+                  class="form__button form__button-clear"
+                >
+                  clear
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="form__result">
+          <p class="form__result-desc" id="press-search">
+            Press “Search” to locate a rep.
+          </p>
+          <div id="result"></div>
+
+          <div class="response-connect-show" id="response">
+            <div id="response-connect" class="response-connect">
+              <h3 class="response__search">Please call Alexion Connect</h3>
+
+              <p class="response__search-desc">
+                A rep is available to talk with you at
+                <a class="response__search-desc-tel" href="tel: 833-551-2539"
+                  >833-551-2539.</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="response__convenience" id="convenience">
+            <div class="resonse__conteiner">
+              <h1 class="response__heading">Connect at your convenience!</h1>
+
+              <div class="response__sub-heading">
+                <h3 class="response__heading-ram">RAM Name</h3>
+              </div>
+              <div class="response__phone-conteiner">
+                <div class="response__phone">
+                  <div class="response__img">
+                    <img src="build/img/phone.svg" alt="icon phone" />
+                  </div>
+
+                  <a class="reponse__desc-phone" href="tel: XXX-XXX-XXXX"
+                    >XXX-XXX-XXXX</a
+                  >
+                </div>
+
+                <div class="response__email">
+                  <div class="response__img">
+                    <img src="build/img/email.svg" alt="icon email" />
+                  </div>
+                  <p class="reponse__desc-email">
+                    <a
+                      class="reponse__desc-email-link"
+                      href="mailto:example@domain.com"
+                    >
+                      example@domain.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="spinner" class="spinner-loader-show">
+            <div class="spinner-loader">
+              <h3 class="spinner-loader__content">
+                Locating a representative near you!
+              </h3>
+              <span class="loader"></span>
+            </div>
+          </div>
+        </div>
+
+        <p class="footer__seccion">US/ULT-a/0548 V1 12/2023</p>
+      </div>
+    </section>
+    <script src="src/js/ultimoris.js"></script>
+  </body>
+</html>

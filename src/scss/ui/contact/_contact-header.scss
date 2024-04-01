@@ -1,0 +1,132 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contact {
+  padding-top: 24px;
+   
+
+  @media screen and (min-width: 1024px) {
+    padding-top: 53px;
+    // padding-bottom: 60px;
+  }
+
+  &__grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    @media screen and (min-width: 1026px) {
+      width: 100%;
+      max-width: 1026px;
+      margin-left: auto;
+      margin-right: auto;
+      grid-template-columns: 497px 497px;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+
+  &__content {
+    margin-top: 12px;
+
+    @media screen and (min-width: 1026px){
+        margin-top: 0;
+    }
+  }
+
+  &__heading {
+    position: relative;
+    color: v.$color-primary-009988;
+    font-family: v.$font_principal;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44px;
+    padding-bottom: 12px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 60px;
+
+      height: 3px;
+      background-color: v.$color-ffa-300;
+      bottom: 0;
+
+      @media screen and (min-width: 1026px) {
+        width: 80px;
+        height: 3px;
+        bottom: -11.5px;
+      }
+    }
+
+    @media screen and (min-width: 1026px) {
+      max-width: 1026px;
+      font-size: 32px;
+      line-height: normal;
+
+      font-size: 50px;
+      font-weight: 600;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 24px;
+    }
+  }
+
+  &__desc {
+    font-family: v.$font_principal;
+    line-height: 22px;
+    color: v.$color-secondary;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+
+    @media screen and (min-width: 1026px) {
+      line-height: 24px;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 400;
+      letter-spacing: 0.4px;
+    }
+  }
+
+  &__flex {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+
+    @media screen and (min-width: 1024px) {
+      gap: 12px;
+    }
+  }
+
+  &__number {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 22px;
+  }
+
+  &__desc-numer {
+    color: v.$color-secondary;
+    line-height: normal;
+    letter-spacing: 0.4px;
+
+    @media screen and (min-width: 1026px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+}
