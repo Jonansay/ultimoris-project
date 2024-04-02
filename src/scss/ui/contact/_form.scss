@@ -130,6 +130,7 @@
     }
 
     &__button {
+      position: relative;
       cursor: pointer;
 
       display: flex;
@@ -162,6 +163,21 @@
       //   width: -moz-max-content;
       //   width: max-content;
 
+      // &::after {
+      //   display: block;
+      //   position: absolute;
+      //   top: 0;
+
+      //   width: 16px;
+      //   height: 16px;
+
+      //   // mask-image: url('../../../img/button-arrow.svg');
+      //   mask-image: url('./img/button-arrow.svg');
+
+      //   mask-repeat: no-repeat;
+      //   mask-size: cover;
+      // }
+
       ///////////////////////
     }
 
@@ -173,20 +189,22 @@
       justify-content: center;
       align-items: center;
       background: v.$color-ffa-300;
-      //   gap: 6px;
     }
-    &__button-search::after {
-      display: block;
-      position: absolute;
-      top: 0;
+    .form__button-search::after {
+      &::after {
+        display: block;
+        position: absolute;
+        // top: 0;
 
-      width: 16px;
-      height: 16px;
+        // width: 16px;
+        // height: 16px;
 
-      mask-image: url('../../../img/button-arrow.svg');
+        // mask-image: url('../../../img/button-arrow.svg');
+        mask-image: url('./img/button-arrow.svg');
 
-      mask-repeat: no-repeat;
-      mask-size: cover;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+      }
     }
 
     &__button-clear {

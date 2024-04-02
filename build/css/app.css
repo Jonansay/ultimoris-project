@@ -642,6 +642,7 @@ a {
   justify-content: space-between;
 }
 .stay-connected .form__button {
+  position: relative;
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -670,14 +671,11 @@ a {
   align-items: center;
   background: #FFA300;
 }
-.stay-connected .form__button-search::after {
+.stay-connected .form .form__button-search::after::after {
   display: block;
   position: absolute;
-  top: 0;
-  width: 16px;
-  height: 16px;
-  -webkit-mask-image: url("../../../img/button-arrow.svg");
-          mask-image: url("../../../img/button-arrow.svg");
+  -webkit-mask-image: url("./img/button-arrow.svg");
+          mask-image: url("./img/button-arrow.svg");
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-size: cover;
@@ -756,7 +754,7 @@ a {
 }
 
 #press-search {
-  display: none;
+  display: block;
 }
 
 .error-validation {

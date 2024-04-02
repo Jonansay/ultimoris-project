@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
   //funcion para mostrar errores
 
   //base de datos
-  const zipbd = ["Saab", "Volvo", "BMW"];
-  // const zipbd = [];
+  // const zipbd = ["Saab", "Volvo", "BMW"];
+  const zipbd = [];
 
   //funciones
 
