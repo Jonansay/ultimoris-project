@@ -3,7 +3,6 @@
 
 .contact {
   padding-top: 24px;
-   
 
   @media screen and (min-width: 1024px) {
     padding-top: 53px;
@@ -15,7 +14,7 @@
 
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 24px;
 
     @media screen and (min-width: 1026px) {
       width: 100%;
@@ -31,8 +30,8 @@
   &__content {
     margin-top: 12px;
 
-    @media screen and (min-width: 1026px){
-        margin-top: 0;
+    @media screen and (min-width: 1026px) {
+      margin-top: 0;
     }
   }
 
