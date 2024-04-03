@@ -4,9 +4,8 @@
 .contact {
   padding-top: 24px;
 
-  @media screen and (min-width: 1024px) {
-    padding-top: 53px;
-    // padding-bottom: 60px;
+  @media screen and (min-width: 1026px) {
+    padding-top: 52.17px;
   }
 
   &__grid {
@@ -63,14 +62,16 @@
 
     @media screen and (min-width: 1026px) {
       max-width: 1026px;
-      font-size: 32px;
       line-height: normal;
-
       font-size: 50px;
-      font-weight: 600;
       margin-left: auto;
       margin-right: auto;
       padding-bottom: 24px;
+
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
     }
   }
 
@@ -85,9 +86,8 @@
     @media screen and (min-width: 1026px) {
       line-height: 24px;
       font-size: 18px;
-      line-height: 24px;
-      font-weight: 400;
-      letter-spacing: 0.4px;
+    
+     
     }
   }
 

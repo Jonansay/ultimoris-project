@@ -403,9 +403,9 @@ a {
 .contact {
   padding-top: 24px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1026px) {
   .contact {
-    padding-top: 53px;
+    padding-top: 52.17px;
   }
 }
 .contact__grid {
@@ -461,13 +461,15 @@ a {
 @media screen and (min-width: 1026px) {
   .contact__heading {
     max-width: 1026px;
-    font-size: 32px;
     line-height: normal;
     font-size: 50px;
-    font-weight: 600;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 24px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
   }
 }
 .contact__desc {
@@ -482,9 +484,6 @@ a {
   .contact__desc {
     line-height: 24px;
     font-size: 18px;
-    line-height: 24px;
-    font-weight: 400;
-    letter-spacing: 0.4px;
   }
 }
 .contact__flex {
