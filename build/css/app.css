@@ -533,18 +533,19 @@ a {
 }
 .stay-connected .form__wrapper {
   width: 100%;
-  background: #083954;
+  height: 100%;
   background: #009988;
   padding-top: 24px;
-  padding-right: 20px;
   padding-bottom: 24px;
+  padding-right: 20px;
   padding-left: 20px;
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1026px) {
   .stay-connected .form__wrapper {
     max-width: 1026px;
+    min-height: 142px;
     padding-top: 28px;
     padding-bottom: 38px;
     padding-right: 32px;
@@ -559,7 +560,7 @@ a {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.4px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 @media screen and (min-width: 1026px) {
   .stay-connected .form__title {
@@ -567,28 +568,32 @@ a {
   }
 }
 .stay-connected .form__input-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  align-self: stretch;
 }
 .stay-connected .form__topic-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
   align-self: stretch;
 }
 .stay-connected .form__control-input {
   width: 100%;
+  height: 100%;
+  height: 34px;
+  display: flex;
+  padding: 8px 20px;
+  align-items: center;
+  align-self: stretch;
   border: 0;
   outline: none;
-  padding: 8px 20px;
-  font-size: 16px;
+  color: #333333;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.4px;
 }
 .stay-connected .form__control-input::-webkit-input-placeholder {
   color: #a6a6a6;
@@ -621,15 +626,18 @@ a {
 @media screen and (min-width: 1026px) {
   .stay-connected .form__control-input {
     padding: 10px 20px;
+    height: 37px;
   }
 }
 .stay-connected .form .nice-select {
   border-radius: 0;
-  height: 36px;
-}
-.stay-connected .form .nice-select {
   width: 100%;
   border-bottom: 1px solid #959595;
+  display: flex;
+  padding: 8px 20px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
 }
 .stay-connected .form .nice-select.open .nice-select-dropdown {
   width: 100%;
@@ -638,11 +646,23 @@ a {
 .stay-connected .form .nice-select .option {
   text-wrap: wrap;
   line-height: normal;
+  color: #333333;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 6px;
+}
+.stay-connected .form .nice-select .option:nth-child(2) {
   padding-top: 6px;
-  padding-bottom: 8px;
 }
 .stay-connected .form .nice-select .option.disabled {
   display: none;
+}
+.stay-connected .form .nice-select .list {
+  max-height: 100%;
+  border-radius: 0;
 }
 .stay-connected .form .form .nice-select {
   width: 100%;
@@ -653,6 +673,11 @@ a {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #a6a6a6;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
 }
 .stay-connected .form__button-field {
   width: 100%;
@@ -668,9 +693,8 @@ a {
   justify-content: space-between;
   width: -webkit-max-content;
   width: max-content;
-  padding: 10px;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -689,13 +713,19 @@ a {
   align-items: center;
   background: #FFA300;
 }
+@media screen and (min-width: 1026px) {
+  .stay-connected .form__button-search {
+    height: 38px;
+  }
+}
 .stay-connected .form .form__button-search::after {
   content: "";
   display: block;
   position: absolute;
-  right: 0;
-  width: 16px;
-  height: 16px;
+  right: 26px;
+  top: 32%;
+  width: 13px;
+  height: 13px;
   background-image: url("../img/button-arrow.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -704,17 +734,30 @@ a {
   font-family: "Roboto Condensed", sans-serif;
   background-color: transparent;
   border: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1026px) {
+  .stay-connected .form__button-clear {
+    height: 38px;
+  }
 }
 .stay-connected .form__grid {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
   align-self: stretch;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1026px) {
   .stay-connected .form__grid {
+    display: unset;
     display: grid;
+    max-width: 962px;
     grid-template-columns: 266px 366px auto;
     gap: 32px;
   }
