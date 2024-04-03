@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const zip = document.querySelector("#zip-code"); //zip code
-  const topic = document.querySelector("#topic"); // el select
+  const topic = document.querySelector("#topic");
 
-  //div escondidos
+  //hidden div
 
   const press = document.querySelector("#press-search"); //div press search
   const convenience = document.querySelector("#convenience"); //div  ram
@@ -12,43 +12,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const error_2 = document.querySelector("#error-2"); //error del select
 
   const divConnect = document.querySelector("#connect");
-  console.log(divConnect);
 
-  //botones
+  //buttons
   const btn_search = document.querySelector("#search");
   const btn_restet = document.querySelector("#reset");
 
-  ////llamando funciones
+  //calling functions
 
-  btn_search.addEventListener("click", showError);
+  // btn_search.addEventListener("click", showError);
   btn_search.addEventListener("click", showArea);
   btn_search.addEventListener("click", hiddenArea);
+  btn_search.addEventListener("click", zipEmpty);
+  btn_search.addEventListener("click", topicEmpty);
   btn_restet.addEventListener("click", resetall);
 
-  // btn_search.addEventListener("click", () =>{
-  //   showError;
-  //   showArea;
-  //   hiddenArea;
-  // });
-
-  //funcion para mostrar errores
-
-  //base de datos
+  //bd
   // const zipbd = ["Saab", "Volvo", "BMW"];
   const zipbd = [];
 
   //funciones
 
-  function showError() {
-    if (zip.value.trim() === "" || topic.value === "0") {
-      // span_mesage.style.display = "block";
+  function zipEmpty() {
+    if (zip.value.trim() === "") {
       error_1.style.display = "block";
-      error_2.style.display = "block";
-      // divConnect.style.display = "none";
-      spinner_show.style.display = "none";
-      divResponse.style.display = "none";
     }
-    return false;
+  }
+  function topicEmpty() {
+    const select = document.querySelector(".nice-select");
+
+    const selectContent = select.querySelector(".current").innerHTML;
+
+    if (selectContent === "Reason for contact") {
+      error_2.style.display = "block";
+    }
   }
 
   function hiddenArea() {
@@ -76,8 +72,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function resetall() {
+    var instance = window.niceSelectForm;
+    instance.clear();
+
     zip.value = "";
-    topic.value = 0;
+
     press.style.display = "block";
     error_1.style.display = "none";
     error_2.style.display = "none";

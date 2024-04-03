@@ -624,17 +624,36 @@ a {
     padding: 10px 20px;
   }
 }
-.stay-connected .form__topic {
-  border: none;
+.stay-connected .form .nice-select {
+  border-radius: 0;
+  height: 36px;
+}
+.stay-connected .form .nice-select {
   width: 100%;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
+  border-bottom: 1px solid #959595;
+}
+.stay-connected .form .nice-select.open .nice-select-dropdown {
+  width: 100%;
+  margin-top: 2px;
+}
+.stay-connected .form .nice-select .option {
+  text-wrap: wrap;
   line-height: normal;
-  background-color: #ffffff;
-  border: 0;
-  outline: none;
-  padding: 10px 20px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+}
+.stay-connected .form .nice-select .option.disabled {
+  display: none;
+}
+.stay-connected .form .form .nice-select {
+  width: 100%;
+  line-height: normal;
+}
+.stay-connected .form .nice-select .current {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .stay-connected .form__button-field {
   width: 100%;
@@ -671,15 +690,16 @@ a {
   align-items: center;
   background: #FFA300;
 }
-.stay-connected .form .form__button-search::after::after {
+.stay-connected .form .form__button-search::after {
+  content: "";
   display: block;
   position: absolute;
-  -webkit-mask-image: url("./img/button-arrow.svg");
-          mask-image: url("./img/button-arrow.svg");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-          mask-size: cover;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/button-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .stay-connected .form__button-clear {
   font-family: "Roboto Condensed", sans-serif;
@@ -1045,5 +1065,250 @@ a {
   .spinner-loader__content {
     text-align: center;
   }
+}
+
+.nice-select {
+  cursor: pointer;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  float: left;
+  clear: both;
+  display: block;
+  box-sizing: border-box;
+  width: auto;
+  height: 38px;
+  padding-right: 30px;
+  padding-left: 18px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 36px;
+  text-align: left !important;
+  white-space: nowrap;
+  background-color: #fff;
+  border: solid 1px #e8e8e8;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.nice-select:hover {
+  border-color: #dbdbdb;
+}
+
+.nice-select:active,
+.nice-select.open,
+.nice-select:focus {
+  border-color: #999;
+}
+
+.nice-select::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  -webkit-transform-origin: 66% 66%;
+          transform-origin: 66% 66%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin-top: -4px;
+  border-right: 2px solid #999;
+  border-bottom: 2px solid #999;
+  transition: all 0.15s ease-in-out;
+}
+
+.nice-select.open::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.nice-select .nice-select-dropdown {
+  pointer-events: none;
+  position: absolute;
+  z-index: 9;
+  top: 100%;
+  left: 0;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transform: scale(0.75) translateY(19px);
+          transform: scale(0.75) translateY(19px);
+  margin-top: 4px;
+  opacity: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+}
+
+.nice-select .option {
+  cursor: pointer;
+  padding-right: 29px;
+  padding-left: 18px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: left;
+  list-style: none;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.nice-select.open .nice-select-dropdown {
+  pointer-events: auto;
+  -webkit-transform: scale(1) translateY(0);
+          transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.nice-select.small .option {
+  min-height: 34px;
+  line-height: 34px;
+}
+
+.nice-select.disabled {
+  pointer-events: none;
+  color: #999;
+  border-color: #ededed;
+}
+
+.nice-select.disabled::after {
+  border-color: #ccc;
+}
+
+.nice-select.wide {
+  width: 100%;
+}
+
+.nice-select.wide .nice-select-dropdown {
+  right: 0 !important;
+  left: 0 !important;
+}
+
+.nice-select.right {
+  float: right;
+}
+
+.nice-select.right .nice-select-dropdown {
+  right: 0;
+  left: auto;
+}
+
+.nice-select.small {
+  height: 36px;
+  font-size: 12px;
+  line-height: 34px;
+}
+
+.nice-select.small::after {
+  width: 4px;
+  height: 4px;
+}
+
+.nice-select .list {
+  overflow: hidden;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  max-height: 210px;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus {
+  background-color: #f6f6f6;
+}
+
+.nice-select .list:hover .option:not(:hover) {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.nice-select .option.selected {
+  font-weight: bold;
+}
+
+.nice-select .option.disabled {
+  cursor: default;
+  color: #999;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.nice-select .optgroup {
+  font-weight: bold;
+}
+
+.no-csspointerevents .nice-select .nice-select-dropdown {
+  display: none;
+}
+
+.no-csspointerevents .nice-select.open .nice-select-dropdown {
+  display: block;
+}
+
+.nice-select .list::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.nice-select .list::-webkit-scrollbar-thumb {
+  background: #ddd;
+}
+
+.nice-select .has-multiple {
+  height: auto;
+  min-height: 36px;
+  padding: 7px 12px;
+  line-height: 22px;
+  white-space: inherit;
+}
+
+.nice-select .has-multiple span.current {
+  display: inline-block;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 24px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.nice-select .has-multiple .multiple-options {
+  display: block;
+  padding: 0;
+  line-height: 24px;
+}
+
+.nice-select .nice-select-search-box {
+  pointer-events: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+.nice-select .nice-select-search {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  min-height: 36px;
+  margin: 0 10px 0 0;
+  padding: 7px 12px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #444;
+  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  outline: 0 !important;
 }
 /*# sourceMappingURL=app.css.map */

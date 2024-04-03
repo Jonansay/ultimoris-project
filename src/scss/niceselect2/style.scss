@@ -1,0 +1,303 @@
+code[class*='language-'],
+pre[class*='language-'] {
+  direction: ltr;
+
+  font-family: "Inconsolata", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  hyphens: none;
+  color: #445870;
+  text-align: left;
+  letter-spacing: 0;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  tab-size: 4;
+  white-space: pre;
+
+  border-radius: 2px;
+}
+
+pre[class*='language-'] {
+  overflow: auto;
+  margin: 0 0 24px;
+  padding: 18px 24px;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: #f6f7f9;
+}
+
+:not(pre) > code[class*='language-'] {
+  padding: 0 2px 1px;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #90a1b5;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #ec4444;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #4abf60;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgb(255 255 255 / 50%);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #55a1fb;
+}
+
+.token.function {
+  color: #dd4a68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+body {
+  margin: 0;
+  padding: 0 18px;
+
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #445870;
+  letter-spacing: -0.25px;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin: 0 0 1.6em;
+  line-height: 1.6;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: -2px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  padding-top: 48px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+h3 {
+  margin: 0 0 12px;
+  padding-top: 12px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+a:not(.button) {
+  color: #55a1fb;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgb(0 0 0 / 0%);
+  outline: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+a:not(.button):hover,
+a:not(.button):focus {
+  border-bottom: 1px solid #88bfff;
+}
+
+::selection {
+  background: #f3f4f7;
+}
+
+.container {
+  max-width: 40em;
+  margin: 96px auto 60px;
+}
+
+.box {
+  margin-bottom: 30px;
+  padding: 24px 30px;
+  background-color: #f6f7f9;
+  border-radius: 2px;
+}
+
+.box::before,
+.box::after {
+  content: '';
+  display: table;
+}
+
+.box::after {
+  clear: both;
+}
+
+label {
+  float: left;
+
+  margin: 0 2px 4px;
+
+  font-size: 11px;
+  color: #90a1b5;
+  text-transform: uppercase;
+}
+
+label.right {
+  float: right;
+}
+
+.button {
+  cursor: pointer;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: auto;
+  height: 38px;
+  padding: 0 24px;
+
+  font-weight: 600;
+  line-height: 38px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+
+  background-color: #55a1fb;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+
+  transition: all 0.2s ease-in-out;
+
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+}
+
+.button:hover,
+.button:focus {
+  background-color: #4196fb;
+}
+
+.button:active {
+  background-color: #2d8bfa;
+}
+
+.button.light {
+  margin-left: 24px;
+
+  line-height: 36px;
+  color: #55a1fb;
+
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+}
+
+.button.light:hover {
+  border-color: #dbdbdb;
+}
+
+.button.light:active,
+.button.light:focus {
+  border-color: #88bfff;
+}
+
+@media screen and (max-width: 360px) {
+  .button {
+    width: 100%;
+  }
+
+  .button.light {
+    margin: 18px 0 0;
+  }
+}
+
+.header {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .header {
+    padding: 0 18px;
+  }
+}
+
+.header p {
+  margin-bottom: 36px;
+  font-size: 18px;
+  color: #90a1b5;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 90px;
+}
+
+.credit {
+  clear: both;
+  margin-top: 90px;
+  font-size: 12px;
+  color: #90a1b5;
+}
