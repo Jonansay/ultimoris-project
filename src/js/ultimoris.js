@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const zip = document.querySelector("#zip-code"); //zip code
   const topic = document.querySelector("#topic");
+  // const open = document.querySelector('.nice-select .open');
+  // console.log(open);
 
   //hidden div
 

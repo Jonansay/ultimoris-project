@@ -679,6 +679,9 @@ a {
   font-weight: 400;
   line-height: 18px;
 }
+.stay-connected .form .option.selected.focus {
+  background-color: #ededed;
+}
 .stay-connected .form__button-field {
   width: 100%;
   display: flex;
