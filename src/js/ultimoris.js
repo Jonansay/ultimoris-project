@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
   btn_restet.addEventListener("click", resetall);
 
   //bd
-  // const zipbd = ["Saab", "Volvo", "BMW"];
-  const zipbd = [];
+  const zipbd = ["Saab", "Volvo", "BMW"];
+  // const zipbd = [];
 
   //funciones
 
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         spinner_show.style.display = "none";
         convenience.style.display = "block";
         btn_search.disabled = true;
-      }, 4000);
+      }, 3000);
     }
   }
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         spinner_show.style.display = "none";
         divResponse.style.display = "block";
         btn_search.disabled = true;
-      }, 4000);
+      }, 3000);
     }
   }
 
