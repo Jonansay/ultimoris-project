@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const zip = document.querySelector("#zip-code"); //zip code
   const topic = document.querySelector("#topic");
-  // const open = document.querySelector('.nice-select .open');
-  // console.log(open);
+  const open = document.querySelector('.nice-select');
+ const buttonField = document.querySelector('.form__button-field');
+ console.log(buttonField);
 
   //hidden div
 
@@ -27,6 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
   btn_search.addEventListener("click", zipEmpty);
   btn_search.addEventListener("click", topicEmpty);
   btn_restet.addEventListener("click", resetall);
+  open.addEventListener('click', openSelect)
+  
+
+
+
 
   //bd
   const zipbd = ["Saab", "Volvo", "BMW"];
@@ -70,6 +76,20 @@ document.addEventListener("DOMContentLoaded", function () {
         divResponse.style.display = "block";
         btn_search.disabled = true;
       }, 3000);
+    }
+  }
+
+  function openSelect(){
+    if(open.classList.contains('open')){
+
+      buttonField.style.marginTop = '190px';
+    
+
+    }
+    else{
+    
+      buttonField.style.marginTop = '0';
+
     }
   }
 

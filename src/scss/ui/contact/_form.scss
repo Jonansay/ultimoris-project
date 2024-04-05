@@ -109,6 +109,18 @@
       justify-content: space-between;
       align-items: center;
       align-self: stretch;
+
+      &::after {
+        transform: rotate(0deg) translateY(0) translateX(-5px);
+
+        width: 13px;
+        height: 8px;
+
+        background-image: url('../img/chevron-down.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: none;
+      }
     }
 
     .nice-select.open .nice-select-dropdown {
@@ -166,6 +178,7 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
+      transition: margin, 0.2s ease-in-out;
     }
 
     &__button {
