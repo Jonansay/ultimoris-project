@@ -545,7 +545,7 @@ a {
 @media screen and (min-width: 1026px) {
   .stay-connected .form__wrapper {
     max-width: 1026px;
-    min-height: 142px;
+    height: 142px;
     padding-top: 28px;
     padding-bottom: 38px;
     padding-right: 32px;
@@ -577,6 +577,11 @@ a {
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;
+}
+@media screen and (min-width: 1026px) {
+  .stay-connected .form__topic-wrapper {
+    margin-top: -2px;
+  }
 }
 .stay-connected .form__control-input {
   width: 100%;
@@ -651,7 +656,7 @@ a {
 }
 .stay-connected .form .nice-select.open .nice-select-dropdown {
   width: 100%;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 .stay-connected .form .nice-select .option {
   text-wrap: wrap;
@@ -783,6 +788,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   height: 100%;
+  height: 215px;
 }
 @media screen and (min-width: 390px) {
   .stay-connected .form__result {
@@ -1116,8 +1122,8 @@ a {
 
 .response-connect {
   display: flex;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
