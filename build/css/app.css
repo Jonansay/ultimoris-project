@@ -1057,8 +1057,6 @@ a {
 
 .response-connect {
   display: flex;
-  margin-left: 20px;
-  margin-right: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1066,15 +1064,17 @@ a {
   align-self: stretch;
   text-align: center;
   margin-top: 38.5px;
+  margin-bottom: 30.5px;
 }
 @media screen and (min-width: 1026px) {
   .response-connect {
     width: 100%;
     max-width: 1026px;
-    margin-top: 24px;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
     gap: 12px;
+    margin-bottom: 8px;
   }
 }
 .response-connect .response__search {

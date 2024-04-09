@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   const zip = document.querySelector("#zip-code"); //zip code
   const topic = document.querySelector("#topic");
-  const open = document.querySelector('.nice-select');
- const buttonField = document.querySelector('.form__button-field');
- console.log(buttonField);
+  const open = document.querySelector(".nice-select");
+  const buttonField = document.querySelector(".form__button-field");
+  console.log(buttonField);
 
   //hidden div
 
@@ -29,14 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
   btn_search.addEventListener("click", topicEmpty);
   btn_restet.addEventListener("click", resetall);
   // open.addEventListener('click', openSelect)
-  
-
-
-
 
   //bd
-  const zipbd = ["Saab", "Volvo", "BMW"];
-  // const zipbd = [];
+  // const zipbd = ["Saab", "Volvo", "BMW"];
+  const zipbd = [];
 
   //funciones
 
@@ -79,17 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function openSelect(){
-    if(open.classList.contains('open')){
-
-      buttonField.style.marginTop = '190px';
-    
-
-    }
-    else{
-    
-      buttonField.style.marginTop = '0';
-
+  function openSelect() {
+    if (open.classList.contains("open")) {
+      buttonField.style.marginTop = "190px";
+    } else {
+      buttonField.style.marginTop = "0";
     }
   }
 
