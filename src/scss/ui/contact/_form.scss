@@ -284,7 +284,7 @@
 
     @media screen and (min-width: 1026px) {
       max-width: 1026px;
-      // padding-top: 20px;
+  
       min-height: 148px;
     }
 
@@ -299,7 +299,8 @@
   
 
       @media screen and (min-width: 1026px) {
-        padding-left: 32px;
+        padding-left: 12px;
+        margin-top: -4px;
       }
     }
   }

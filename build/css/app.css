@@ -805,7 +805,8 @@ a {
 }
 @media screen and (min-width: 1026px) {
   .stay-connected .form__result-desc {
-    padding-left: 32px;
+    padding-left: 12px;
+    margin-top: -4px;
   }
 }
 .stay-connected .footer__seccion {
