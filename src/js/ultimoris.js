@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   //bd
-  // const zipbd = ["Saab", "Volvo", "BMW"];
-  const zipbd = [];
+  const zipbd = ["Saab", "Volvo", "BMW"];
+  // const zipbd = [];
 
   //funciones
 
