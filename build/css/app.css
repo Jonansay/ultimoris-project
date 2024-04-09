@@ -1493,6 +1493,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.footer__links-a:hover {
+  text-decoration: underline;
+}
 .footer__img {
   position: relative;
   width: 100%;
