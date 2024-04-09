@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // open.addEventListener('click', openSelect)
 
   //bd
-  // const zipbd = ["Saab", "Volvo", "BMW"];
-  const zipbd = [];
+  const zipbd = ["Saab", "Volvo", "BMW"];
+  // const zipbd = [];
 
   //funciones
 
