@@ -280,23 +280,12 @@
     margin-left: auto;
     margin-right: auto;
 
-    // @media screen and (min-width: 390px) {
-    //   width: 100%;
-
-    //   background: v.$color-bg-result;
-    //   padding-top: 24px;
-
-    //   margin-left: auto;
-    //   margin-right: auto;
-
-    //   height: 100%;
-    //   height: 215px;
-    // }
+  
 
     @media screen and (min-width: 1026px) {
       max-width: 1026px;
-      padding-top: 20px;
-      height: 148px;
+      // padding-top: 20px;
+      min-height: 148px;
     }
 
     &-desc {

@@ -31,9 +31,6 @@
   .resonse__conteiner {
     display: flex;
 
-    padding-bottom: 32px;
-    padding-left: 20px;
-    padding-right: 20px;
     flex-direction: column;
     align-items: flex-start;
 
@@ -50,7 +47,8 @@
       margin-right: auto;
       max-width: 962px;
       padding-left: 0;
-      margin-top: 28px;
+      margin-top: 20px;
+      margin-bottom: 8px;
       padding-bottom: 0;
     }
 
