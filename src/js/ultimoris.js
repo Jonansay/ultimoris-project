@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   btn_search.addEventListener("click", zipEmpty);
   btn_search.addEventListener("click", topicEmpty);
   btn_restet.addEventListener("click", resetall);
-  // open.addEventListener('click', openSelect)
+  // open.addEventListener('click', openSelect);
 
   //bd
   const zipbd = ["Saab", "Volvo", "BMW"];

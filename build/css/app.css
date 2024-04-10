@@ -565,6 +565,7 @@ a {
 @media screen and (min-width: 1026px) {
   .stay-connected .form__title {
     font-size: 22px;
+    margin-bottom: 12px;
   }
 }
 .stay-connected .form__input-wrapper {
