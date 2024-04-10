@@ -704,6 +704,12 @@ a {
   justify-content: space-between;
   transition: margin, 0.2s ease-in-out;
 }
+@media screen and (min-width: 1026px) {
+  .stay-connected .form__button-field {
+    justify-content: flex-start;
+    gap: 32px;
+  }
+}
 .stay-connected .form__button {
   position: relative;
   cursor: pointer;
