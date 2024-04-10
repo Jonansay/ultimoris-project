@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const topic = document.querySelector("#topic");
   const open = document.querySelector(".nice-select");
   const buttonField = document.querySelector(".form__button-field");
-  console.log(buttonField);
 
   //hidden div
 
@@ -28,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
   btn_search.addEventListener("click", zipEmpty);
   btn_search.addEventListener("click", topicEmpty);
   btn_restet.addEventListener("click", resetall);
+  zip.addEventListener("keyup", zipEmpty);
+
   // open.addEventListener('click', openSelect);
 
   //bd
@@ -37,17 +38,27 @@ document.addEventListener("DOMContentLoaded", function () {
   //funciones
 
   function zipEmpty() {
+    const fieldParent = zip.parentElement;
     if (zip.value.trim() === "") {
-      error_1.style.display = "block";
+      fieldParent.classList.add("error");
+      fieldParent.classList.remove("valid");
+    } else {
+      fieldParent.classList.add("valid");
+      fieldParent.classList.remove("error");
     }
   }
   function topicEmpty() {
     const select = document.querySelector(".nice-select");
 
     const selectContent = select.querySelector(".current").innerHTML;
+    const fieldParent = topic.parentElement;
 
     if (selectContent === "Reason for contact") {
-      error_2.style.display = "block";
+      fieldParent.classList.add("error");
+      fieldParent.classList.remove("valid");
+    } else {
+      fieldParent.classList.add("valid");
+      fieldParent.classList.remove("error");
     }
   }
 
@@ -86,12 +97,19 @@ document.addEventListener("DOMContentLoaded", function () {
   function resetall() {
     var instance = window.niceSelectForm;
     instance.clear();
+    const fieldParent = zip.parentElement;
+    fieldParent.classList.remove("valid");
+    fieldParent.classList.remove("error");
+
+    const topicParent = topic.parentElement;
+    topicParent.classList.remove("valid");
+    topicParent.classList.remove("error");
 
     zip.value = "";
 
     press.style.display = "block";
-    error_1.style.display = "none";
-    error_2.style.display = "none";
+    // error_1.style.display = "none";
+    // error_2.style.display = "none";
     convenience.style.display = "none";
     divResponse.style.display = "none";
     btn_search.disabled = false;

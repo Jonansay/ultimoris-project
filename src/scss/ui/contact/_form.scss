@@ -276,6 +276,37 @@
         gap: 32px;
       }
     }
+
+    .form__input-wrapper,
+    .form__topic-wrapper {
+      .error-mesage {
+        span {
+          display: none;
+        }
+      }
+
+      &.valid {
+        .error-mesage {
+          span {
+            display: none;
+          }
+        }
+      }
+
+      &.error {
+        .error-mesage {
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .form__topic-wrapper.valid {
+      .current {
+        color: #333;
+      }
+    }
   }
 
   .form__result {
@@ -290,7 +321,6 @@
 
     @media screen and (min-width: 1026px) {
       max-width: 1026px;
-  
       min-height: 148px;
     }
 

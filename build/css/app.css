@@ -789,6 +789,21 @@ a {
     gap: 32px;
   }
 }
+.stay-connected .form .form__input-wrapper .error-mesage span,
+.stay-connected .form .form__topic-wrapper .error-mesage span {
+  display: none;
+}
+.stay-connected .form .form__input-wrapper.valid .error-mesage span,
+.stay-connected .form .form__topic-wrapper.valid .error-mesage span {
+  display: none;
+}
+.stay-connected .form .form__input-wrapper.error .error-mesage span,
+.stay-connected .form .form__topic-wrapper.error .error-mesage span {
+  display: block;
+}
+.stay-connected .form .form__topic-wrapper.valid .current {
+  color: #333;
+}
 .stay-connected .form__result {
   width: 100%;
   background: #F5F3F1;
@@ -852,14 +867,6 @@ a {
   font-weight: 400;
   line-height: normal;
   margin-top: 6px;
-}
-
-#error-1 {
-  display: none;
-}
-
-#error-2 {
-  display: none;
 }
 
 #convenience {
