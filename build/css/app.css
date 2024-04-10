@@ -421,7 +421,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     grid-template-columns: 497px 497px;
-    align-items: center;
+    align-items: flex-start;
     gap: 32px;
   }
 }
@@ -484,6 +484,7 @@ a {
   .contact__desc {
     line-height: 24px;
     font-size: 18px;
+    margin-top: 31.5px;
   }
 }
 .contact__flex {
@@ -497,7 +498,7 @@ a {
 }
 @media screen and (min-width: 1024px) {
   .contact__flex {
-    gap: 12px;
+    gap: 8px;
   }
 }
 .contact__number {

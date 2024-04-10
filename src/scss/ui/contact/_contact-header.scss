@@ -9,6 +9,7 @@
   }
 
   &__grid {
+    // border: 2px solid red;
     width: 100%;
 
     display: grid;
@@ -21,7 +22,7 @@
       margin-left: auto;
       margin-right: auto;
       grid-template-columns: 497px 497px;
-      align-items: center;
+      align-items: flex-start;
       gap: 32px;
     }
   }
@@ -86,8 +87,7 @@
     @media screen and (min-width: 1026px) {
       line-height: 24px;
       font-size: 18px;
-    
-     
+      margin-top: 31.5px;
     }
   }
 
@@ -101,7 +101,7 @@
     align-self: stretch;
 
     @media screen and (min-width: 1024px) {
-      gap: 12px;
+      gap: 8px;
     }
   }
 
