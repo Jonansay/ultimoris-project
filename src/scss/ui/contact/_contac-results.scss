@@ -228,22 +228,7 @@
       text-decoration-line: underline;
     }
 
-    // @media screen and (min-width: 1000px) {
-    //   margin-left: 36px;
-    //   &::after {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: -36px;
-    //     width: 1px;
-    //     height: 61px;
-    //     margin-top: auto;
-    //     margin-bottom: auto;
-    //     background: #939393;
-
-    //     opacity: 0.3;
-    //   }
-    // }
+ 
     @media screen and (min-width: 1026px) {
       margin-top: 0;
       margin-left: 36px;
